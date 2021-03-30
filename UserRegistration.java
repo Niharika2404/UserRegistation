@@ -26,7 +26,14 @@ public class UserRegistration {
 		String email = scan.nextLine();
 		boolean result2 = new UserRegistration().validateEmail(email);
 		System.out.println(result2);
+		
+		//phonenumber
+		System.out.println("Enter the Phone Number: ");
+		String phonenumber = scan.nextLine();
+		boolean result3 = new UserRegistration().validatePhoneNumber(phonenumber);
+		System.out.println(result3);
 	}
+	
 	public boolean validateFirstName(String firstname) {
 		return Pattern.compile("^[A-Z][a-z]{2,}").matcher(firstname).matches();
 	}
@@ -37,5 +44,9 @@ public class UserRegistration {
 	
 	public boolean validateEmail(String email) {
 		return Pattern.compile("^(.+)@(.+)$").matcher(email).matches();
+	}
+	
+	public boolean validatePhoneNumber(String phonenumber) {
+		return Pattern.compile("^[0-9]{2} [0-9]{10}$").matcher(phonenumber).matches();
 	}
 }
