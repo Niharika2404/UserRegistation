@@ -57,6 +57,6 @@ public class UserRegistration {
 	}
 	
 	public boolean validatePassword(String password) {
-		return Pattern.compile("[a-z0-9]{8,}").matcher(password).matches();
+		return Pattern.compile("[A-Z]{1,}[a-z0-9]{7,}").matcher(password).matches();
 	}
 }
