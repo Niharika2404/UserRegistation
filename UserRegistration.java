@@ -8,30 +8,30 @@ public class UserRegistration {
 		System.out.println("Welcome to User Registraion");
 		
 		Scanner scan = new Scanner(System.in);
-//		
-//		//firstname
-//		System.out.println("Enter the First Name: ");
-//		String firstname = scan.nextLine();
-//		boolean result = new UserRegistration().validateFirstName(firstname);
-//		System.out.println(result);
-//		
-//		//lastname
-//		System.out.println("Enter the Last Name: ");
-//		String lastname = scan.nextLine();
-//		boolean result1 = new UserRegistration().validateLastName(lastname);
-//		System.out.println(result1);
-//		
-//		//email
-//		System.out.println("Enter the Email: ");
-//		String email = scan.nextLine();
-//		boolean result2 = new UserRegistration().validateEmail(email);
-//		System.out.println(result2);
-//		
-//		//phonenumber
-//		System.out.println("Enter the Phone Number: ");
-//		String phonenumber = scan.nextLine();
-//		boolean result3 = new UserRegistration().validatePhoneNumber(phonenumber);
-//		System.out.println(result3);
+		
+		//firstname
+		System.out.println("Enter the First Name: ");
+		String firstname = scan.nextLine();
+		boolean result = new UserRegistration().validateFirstName(firstname);
+		System.out.println(result);
+		
+		//lastname
+		System.out.println("Enter the Last Name: ");
+		String lastname = scan.nextLine();
+		boolean result1 = new UserRegistration().validateLastName(lastname);
+		System.out.println(result1);
+		
+		//email
+		System.out.println("Enter the Email: ");
+		String email = scan.nextLine();
+		boolean result2 = new UserRegistration().validateEmail(email);
+		System.out.println(result2);
+		
+		//phonenumber
+		System.out.println("Enter the Phone Number: ");
+		String phonenumber = scan.nextLine();
+		boolean result3 = new UserRegistration().validatePhoneNumber(phonenumber);
+		System.out.println(result3);
 		
 		//password
 		System.out.println("Enter the Password: ");
@@ -57,6 +57,6 @@ public class UserRegistration {
 	}
 	
 	public boolean validatePassword(String password) {
-		return Pattern.compile("(?=.*[a-z])(?=.*d)(?=.*[A-Z]).{8,}").matcher(password).matches();
+		return Pattern.compile("(?=.*[a-z])(?=.*d)(?=.*[A-Z])(?=.*[@#$%]).{8,}").matcher(password).matches();
 	}
 }
